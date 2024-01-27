@@ -983,7 +983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6afe35cda46af47af102afe4f0283f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialBoxPrefab: {fileID: 0}
+  specialBoxPrefab: {fileID: 3704562202224690604, guid: 118267a030394d24cbff5e03e100e550,
+    type: 3}
   poolSize: 6
   spawnPositions: []
 --- !u!4 &464614798
