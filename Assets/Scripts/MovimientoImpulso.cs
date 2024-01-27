@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimientoImpulso : MonoBehaviour
 {
     MovimientoDireccion movimientoDireccion;
+    public Image imagen;
+    private float vidaMaxima=100;
 
     // Update is called once per frame
     void Update()
@@ -14,7 +17,8 @@ public class MovimientoImpulso : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.X))
          {
            movimientoDireccion. CalcularVector();
-           vector();
+        //    vector();
+            imagen.fillAmount = 25/vidaMaxima;
            
         }   
     }

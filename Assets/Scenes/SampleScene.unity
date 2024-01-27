@@ -1422,6 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db52688cd89b93543934f74b8749f46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imagen: {fileID: 2007825164}
 --- !u!1 &1195128806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db52688cd89b93543934f74b8749f46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imagen: {fileID: 2007825164}
 --- !u!1 &1449098720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,7 +3055,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.065
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -3078,7 +3080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6ec03468e94004db24acc2eeb6abe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 1408570310}
+  centerOfMass: {fileID: 0}
   orbitalSpeed: 0
   scale: 1
   force: {fileID: 2007825164}
