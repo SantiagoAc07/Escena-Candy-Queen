@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,24 +5,68 @@ public class MovimientoImpulso : MonoBehaviour
 {
     MovimientoDireccion movimientoDireccion;
     public Image imagen;
-    private float vidaMaxima=100;
+    private float vidaMaxima = 100;
+    public float speed = 0.20f;
+    private bool isIncreasing = true;
+
+    public int contador;  //Codigo santi contador
+    public bool presX = false;
+
+    void awake()
+    {
+        movimientoDireccion = GetComponent<MovimientoDireccion>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        movimientoDireccion = GetComponent<MovimientoDireccion>(); 
+        // if(MovimientoDireccion.direccion)
+        // {
+        if (imagen.fillAmount >= 1f)
+            isIncreasing = false;
 
-         if (Input.GetKeyDown(KeyCode.X))
-         {
-           movimientoDireccion. CalcularVector();
-        //    vector();
-            imagen.fillAmount = 25/vidaMaxima;
-           
-        }   
+        if (imagen.fillAmount <= 0f)
+            isIncreasing = true;
+
+
+        if (isIncreasing)
+            imagen.fillAmount += speed * Time.deltaTime;
+        else
+            imagen.fillAmount -= speed * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            float captureImpulse = imagen.fillAmount;
+            Debug.Log("Imagen Fill Amount Value; " + captureImpulse);
+        }
+        // while (presX == false)
+        // {
+        //     if (Input.GetKeyDown(KeyCode.X))
+        //     {                       
+
+        //     impulso();
+        //     presX = true;
+        //     } 
+
+        //     if (contador<100)
+        //     {
+        //         contador+=20;
+        //     }
+        //     else if(contador == 100 && contador <=0 )
+        //     {
+        //         contador -=20;
+
+        //     } 
+        //     print(contador); 
+        // }
+
+        // }
     }
-     void vector()
-     {
-         Vector3 dir = (transform.position - movimientoDireccion.centerOfMass.position).normalized;
-         movimientoDireccion.centerOfMass.GetComponent<Rigidbody>().AddForce(dir * 10f, ForceMode.Impulse);
-     }
+
+    void impulso()
+    {
+        Vector3 direccion = movimientoDireccion.CalcularVector();
+        print(direccion);
+        movimientoDireccion.centerOfMass.GetComponent<Rigidbody>().AddForce(direccion * 10f, ForceMode.Impulse);
+    }
 }

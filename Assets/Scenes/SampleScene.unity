@@ -1281,8 +1281,6 @@ GameObject:
   - component: {fileID: 1113889233}
   - component: {fileID: 1113889232}
   - component: {fileID: 1113889236}
-  - component: {fileID: 1113889237}
-  - component: {fileID: 1113889238}
   m_Layer: 0
   m_Name: flecha
   m_TagString: Untagged
@@ -1385,44 +1383,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113889231}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6ec03468e94004db24acc2eeb6abe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 1408570310}
-  orbitalSpeed: 3
-  scale: 1
-  force: {fileID: 2007825164}
-  barraFuerza: {fileID: 1201822732}
-  fillAmount: 0
---- !u!114 &1113889237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113889231}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89b1bd5e5cea0f84c92b8b501250b3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   centerOfMass: {fileID: 1408570310}
-  orbitalSpeed: 100
---- !u!114 &1113889238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113889231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db52688cd89b93543934f74b8749f46c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imagen: {fileID: 2007825164}
+  orbitalSpeed: 10
 --- !u!1 &1195128806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1541,6 @@ GameObject:
   - component: {fileID: 1408570311}
   - component: {fileID: 1408570314}
   - component: {fileID: 1408570316}
-  - component: {fileID: 1408570315}
   m_Layer: 0
   m_Name: Player(1)
   m_TagString: Untagged
@@ -1699,20 +1665,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1408570315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408570309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b1bd5e5cea0f84c92b8b501250b3e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 1408570310}
-  orbitalSpeed: 10
 --- !u!114 &1408570316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,6 +1678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagen: {fileID: 2007825164}
+  speed: 0.2
+  contador: 0
+  presX: 0
 --- !u!1 &1449098720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,7 +2958,6 @@ GameObject:
   - component: {fileID: 2007825163}
   - component: {fileID: 2007825165}
   - component: {fileID: 2007825164}
-  - component: {fileID: 2007825166}
   m_Layer: 5
   m_Name: Green
   m_TagString: Untagged
@@ -3068,24 +3022,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007825162}
   m_CullTransparentMesh: 1
---- !u!114 &2007825166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007825162}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6ec03468e94004db24acc2eeb6abe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 0}
-  orbitalSpeed: 0
-  scale: 1
-  force: {fileID: 2007825164}
-  barraFuerza: {fileID: 2007825163}
-  fillAmount: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
