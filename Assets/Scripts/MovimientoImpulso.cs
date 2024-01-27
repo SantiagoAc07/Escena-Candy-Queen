@@ -5,7 +5,6 @@ public class MovimientoImpulso : MonoBehaviour
 {
     MovimientoDireccion movimientoDireccion;
     public Image imagen;
-    private float vidaMaxima = 100;
     public float speed = 0.20f;
     private bool isIncreasing = true;
 
