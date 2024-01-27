@@ -9,6 +9,8 @@ public class MovimientoJugador : MonoBehaviour
     public float scale = 1.0f;
 
     // Update is called once per frame
+
+    
     void Update(){        
         if(Input.GetKeyDown(KeyCode.X))
             CalcularVector(); //llama una funcion con la cual se calcula el vector de direccion
