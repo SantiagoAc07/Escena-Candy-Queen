@@ -25,10 +25,10 @@ public class MovimientoDireccion : MonoBehaviour
         movimientoImpulso = GetComponent<MovimientoImpulso>();
 
         Orbit();
-        // if (Input.GetKeyDown(KeyCode.X))
-        // {
-        //     CalcularVector();
-        // }
+         if (Input.GetKeyDown(KeyCode.X))
+         {
+             CalcularVector();
+         }
     }
 
     public Vector3 CalcularVector()
