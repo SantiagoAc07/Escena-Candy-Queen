@@ -17,7 +17,14 @@ public class MovimientoDireccion : MonoBehaviour
     private Vector3 dir;
     private float fuerzaCalculada;
 
+    [SerializeField] Rigidbody rb;
+
     public static bool direccion;
+
+    void Start(){
+
+        rb = GetComponent<Rigidbody>();
+    } 
 
     // Update is called once per frame
     void Update()
