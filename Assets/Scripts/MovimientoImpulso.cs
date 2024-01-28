@@ -4,14 +4,16 @@ using UnityEngine.UI;
 public class MovimientoImpulso : MonoBehaviour
 {
     MovimientoDireccion movimientoDireccion;
-    public Image imagen;
+    public static Image imagen;
     public float speed = 0.20f;
     private bool isIncreasing = true;
 
     public int contador;  //Codigo santi contador
     public bool presX = false;
 
-    void awake()
+    
+
+    void Awake()
     {
         movimientoDireccion = GetComponent<MovimientoDireccion>();
     }
@@ -37,6 +39,8 @@ public class MovimientoImpulso : MonoBehaviour
         {
             float captureImpulse = imagen.fillAmount;
             Debug.Log("Imagen Fill Amount Value; " + captureImpulse);
+            impulso();
+            
         }
         // while (presX == false)
         // {
@@ -65,7 +69,6 @@ public class MovimientoImpulso : MonoBehaviour
     void impulso()
     {
         Vector3 direccion = movimientoDireccion.CalcularVector();
-        print(direccion);
-        movimientoDireccion.centerOfMass.GetComponent<Rigidbody>().AddForce(direccion * 10f, ForceMode.Impulse);
+        movimientoDireccion.centerOfMass.GetComponent<Rigidbody>(). AddForce(direccion * 10f, ForceMode.Impulse);
     }
 }

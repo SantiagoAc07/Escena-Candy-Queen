@@ -10,7 +10,14 @@ public class MovimientoDireccion : MonoBehaviour
     public Transform centerOfMass;
     public float orbitalSpeed;
 
+    [SerializeField] Rigidbody rb;
+
     public static bool direccion;
+
+    void Start(){
+
+        rb = GetComponent<Rigidbody>();
+    } 
 
     // Update is called once per frame
     void Update()
