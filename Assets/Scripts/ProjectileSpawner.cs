@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ProjectileSpawner : MonoBehaviour
 {
@@ -9,13 +10,38 @@ public class ProjectileSpawner : MonoBehaviour
     public GameObject projectile;
     public float launchSpeed = 10f;
 
+    public bulletPool pool;
+
+    private float _shootTimeRemeaning;
+
+    private bool _canShoot = false;
     
-
     void Update (){
-
-        if(Input.GetKeyDown(KeyCode.Space)){
-            var _projectile = Instantiate(projectile, launchPoint.position, launchPoint.rotation);
-            _projectile.GetComponent<Rigidbody>().velocity = launchPoint.forward * launchSpeed;
+        if (_shootTimeRemeaning <= 0)
+        {
+            _canShoot = true;            
         }
+        else
+        {
+            _shootTimeRemeaning -= Time.deltaTime;            
+        }
+
+        //accionar la intanciacion de un objeto 
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if (_canShoot)
+            {
+                Shoot();
+            }
+            
+        }
+    }
+
+    public void Shoot()
+    {
+        var _projectile = pool.RequestProyectile();
+        _projectile.transform.SetPositionAndRotation(launchPoint.position, launchPoint.rotation);
+        _projectile.GetComponent<Rigidbody>().velocity = launchPoint.forward * launchSpeed;
+        _canShoot = false;
+        _shootTimeRemeaning = 2.8f;
     }
 }
