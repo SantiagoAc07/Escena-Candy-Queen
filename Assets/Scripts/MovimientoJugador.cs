@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -65,7 +63,8 @@ public class MovimientoJugador : MonoBehaviour
     }
 
     //funcion en la cual voy a sibor y bajar gradualmente el fill amoun en mi imagen
-    void barra(){
+    void barra()
+    {
         force.fillAmount = 25 / 100;
     }
 
@@ -73,6 +72,6 @@ public class MovimientoJugador : MonoBehaviour
     private void Awake()
     {
         barraFuerza = GetComponent<RectTransform>();
-        
+
     }
 }
