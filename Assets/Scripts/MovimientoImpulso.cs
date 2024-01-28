@@ -11,7 +11,7 @@ public class MovimientoImpulso : MonoBehaviour
     public int contador;  //Codigo santi contador
     public bool presX = false;
 
-    void awake()
+    void Awake()
     {
         movimientoDireccion = GetComponent<MovimientoDireccion>();
     }
