@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class MovimientoImpulso2 : MonoBehaviour
 {
-    public static MovimientoDireccion2 movDirection;
+    public MovimientoDireccion2 movDirection;
     public Image imagen;
     public float speed = 0.40f;
     private bool isIncreasing;
