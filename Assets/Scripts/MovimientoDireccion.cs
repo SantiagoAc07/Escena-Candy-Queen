@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MovimientoDireccion : MonoBehaviour
-
-
 {
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private float fuerza;

@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MovimientoImpulso2 : MonoBehaviour
-
+public class MovimientoImpulso : MonoBehaviour
 {
     MovimientoDireccion movimientoDireccion;
     public Image imagen;
