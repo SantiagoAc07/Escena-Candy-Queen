@@ -954,54 +954,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!1 &464614796
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 464614798}
-  - component: {fileID: 464614797}
-  m_Layer: 0
-  m_Name: BoxPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &464614797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464614796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be6afe35cda46af47af102afe4f0283f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  specialBoxPrefab: {fileID: 3704562202224690604, guid: 118267a030394d24cbff5e03e100e550,
-    type: 3}
-  poolSize: 6
-  spawnPositions: []
---- !u!4 &464614798
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464614796}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647614392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +965,6 @@ GameObject:
   - component: {fileID: 647614395}
   - component: {fileID: 647614394}
   - component: {fileID: 647614393}
-  - component: {fileID: 647614396}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1071,20 +1022,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &647614396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647614392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b1bd5e5cea0f84c92b8b501250b3e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 1408570310}
-  orbitalSpeed: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,8 +1373,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b1bd5e5cea0f84c92b8b501250b3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRB: {fileID: 1408570314}
+  fuerza: 1000
+  medidorFuerza: {fileID: 2007825164}
   centerOfMass: {fileID: 1408570310}
-  orbitalSpeed: 10
+  orbitalSpeed: 150
+  estado: 0
 --- !u!1 &1195128806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1652,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1408570316
 MonoBehaviour:
@@ -3085,5 +3026,4 @@ SceneRoots:
   - {fileID: 1195128807}
   - {fileID: 1632965997}
   - {fileID: 1779052776}
-  - {fileID: 464614798}
   - {fileID: 647614395}
