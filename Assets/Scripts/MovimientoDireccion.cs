@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovimientoDireccion : MonoBehaviour
-
-
 {
     MovimientoImpulso movimientoImpulso;
     public Transform centerOfMass;
@@ -12,7 +8,6 @@ public class MovimientoDireccion : MonoBehaviour
 
     public static bool direccion;
 
-    // Update is called once per frame
     void Update()
     {
         movimientoImpulso = GetComponent<MovimientoImpulso>();
