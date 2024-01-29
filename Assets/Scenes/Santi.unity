@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1035,8 +1035,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b1bd5e5cea0f84c92b8b501250b3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRB: {fileID: 0}
+  fuerza: 0
+  medidorFuerza: {fileID: 0}
   centerOfMass: {fileID: 1408570310}
   orbitalSpeed: 0
+  estado: 0
   rb: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
@@ -1371,11 +1375,11 @@ Transform:
   m_GameObject: {fileID: 1113889231}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 72.66999, y: 2.9499817, z: 25.300129}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.090006515, y: 0.00386556, z: 1.2207031}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1408570310}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1113889236
 MonoBehaviour:
@@ -1389,8 +1393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b1bd5e5cea0f84c92b8b501250b3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRB: {fileID: 0}
+  fuerza: 0
+  medidorFuerza: {fileID: 0}
   centerOfMass: {fileID: 0}
   orbitalSpeed: 10
+  estado: 0
   rb: {fileID: 0}
 --- !u!1 &1195128806
 GameObject:
@@ -1564,6 +1572,7 @@ Transform:
   m_Children:
   - {fileID: 1201822732}
   - {fileID: 1897844277}
+  - {fileID: 1113889235}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1408570311
@@ -3143,5 +3152,4 @@ SceneRoots:
   - {fileID: 1632965997}
   - {fileID: 1779052776}
   - {fileID: 647614395}
-  - {fileID: 1113889235}
   - {fileID: 1408570310}

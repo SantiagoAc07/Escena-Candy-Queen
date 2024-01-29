@@ -5,7 +5,7 @@ public class MovimientoDireccion : MonoBehaviour
 {
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private float fuerza;
-    MovimientoImpulso2 movimientoImpulso;
+    MovimientoImpulso movimientoImpulso;
     public Image medidorFuerza;
     public Transform centerOfMass;
     public float orbitalSpeed;
@@ -26,7 +26,7 @@ public class MovimientoDireccion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movimientoImpulso = GetComponent<MovimientoImpulso2>();
+        movimientoImpulso = GetComponent<MovimientoImpulso>();
 
         Orbit();
         if (Input.GetKeyDown(KeyCode.X))

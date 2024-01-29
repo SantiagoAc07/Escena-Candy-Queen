@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MovimientoDireccion2 : MonoBehaviour
+public class MovimientoDireccionPlayer2 : MonoBehaviour
 
 
 {
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private float fuerza;
-    public static MovimientoImpulso2 movimientoImpulso;
+    public static MovimientoImpulso movimientoImpulso;
     public Image medidorFuerza;
     public Transform centerOfMass;
     public float orbitalSpeed;
@@ -28,7 +28,7 @@ public class MovimientoDireccion2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movimientoImpulso = GetComponent<MovimientoImpulso2>();
+        movimientoImpulso = GetComponent<MovimientoImpulso>();
 
         Orbit();
         if (Input.GetKeyDown(KeyCode.M))
