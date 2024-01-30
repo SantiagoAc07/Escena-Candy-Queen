@@ -8,7 +8,6 @@ public class MovimientoImpulso : MonoBehaviour
     public float speed = 0.20f;
     private bool isIncreasing = true;
 
-    public int contador;  //Codigo santi contador
     public bool presX = false;
 
     void Awake()
@@ -16,11 +15,13 @@ public class MovimientoImpulso : MonoBehaviour
         movimientoDireccion = GetComponent<MovimientoDireccion>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // if(MovimientoDireccion.direccion)
-        // {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            presX = true;
+        }
+
         if (imagen.fillAmount >= 1f)
             isIncreasing = false;
 
@@ -38,34 +39,5 @@ public class MovimientoImpulso : MonoBehaviour
             float captureImpulse = imagen.fillAmount;
             Debug.Log("Imagen Fill Amount Value; " + captureImpulse);
         }
-        // while (presX == false)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.X))
-        //     {                       
-
-        //     impulso();
-        //     presX = true;
-        //     } 
-
-        //     if (contador<100)
-        //     {
-        //         contador+=20;
-        //     }
-        //     else if(contador == 100 && contador <=0 )
-        //     {
-        //         contador -=20;
-
-        //     } 
-        //     print(contador); 
-        // }
-
-        // }
-    }
-
-    void impulso()
-    {
-        Vector3 direccion = movimientoDireccion.CalcularVector();
-        print(direccion);
-        movimientoDireccion.centerOfMass.GetComponent<Rigidbody>().AddForce(direccion * 10f, ForceMode.Impulse);
     }
 }
