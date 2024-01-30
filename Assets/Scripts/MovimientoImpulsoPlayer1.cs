@@ -4,11 +4,10 @@ using UnityEngine.UI;
 
 public class MovimientoImpulsoPlayer1 : MonoBehaviour
 {
-    public static MovimientoDireccion movimientoDireccion;
+public static MovimientoDireccion movimientoDireccion;
     public Image imagen;
     public float speed = 0.40f;
     private bool isIncreasing = true;
-
     public int contador;  //Codigo santi contador
     public bool pressKey = false;
 
