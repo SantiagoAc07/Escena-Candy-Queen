@@ -9,7 +9,7 @@ public class bulletPool : MonoBehaviour
     //public Bullet;
     public GameObject bullet;
     private GameObject proyectil;
-//aqui cambiamos tipo Gameobject a bullet ejm
+    //aqui cambiamos tipo Gameobject a bullet ejm
     public List<GameObject> bulletList;
 
     void Start()
@@ -23,7 +23,7 @@ public class bulletPool : MonoBehaviour
         
     }
 
-    private void AddProyectilePool(int amount)
+    private void AddProyectilePool(int amount) //Metodo para generar los proyectiles
     {
         for(int i = 0; i < amount; i++)
         {
@@ -37,7 +37,7 @@ public class bulletPool : MonoBehaviour
 
     public GameObject RequestProyectile()
     {
-        foreach(GameObject proyectile in bulletList)
+        foreach(GameObject proyectile in bulletList) 
         {
             if(!proyectile.gameObject.activeSelf)
             {

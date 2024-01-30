@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    public Transform launchPoint;
-    public GameObject projectile;
-    public float launchSpeed = 10f;
+    public Transform launchPoint; //Punto de lanzamiento
+    public GameObject projectile; //Proyectil
+    public float launchSpeed = 10f; //Velocidad de lanzamiento
 
     public bulletPool pool;
 
-    private float _shootTimeRemeaning;
+    private float _shootTimeRemeaning; //Tiempo entre disparos
 
-    private bool _canShoot = false;
+    private bool _canShoot = false; //Identificador de que puede disparar
     
     void Update (){
-        if (_shootTimeRemeaning <= 0)
+        if (_shootTimeRemeaning <= 0) 
         {
             _canShoot = true;            
         }
@@ -26,18 +26,18 @@ public class ProjectileSpawner : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             if (_canShoot)
             {
-                Shoot();
+                Shoot(); //llama al método de disparo 
             }
             
         }
     }
 
-    public void Shoot()
+    public void Shoot() //Metodo de disparo
     {
-        var _projectile = pool.RequestProyectile();
-        _projectile.transform.SetPositionAndRotation(launchPoint.position, launchPoint.rotation);
-        _projectile.GetComponent<Rigidbody>().velocity = launchPoint.forward * launchSpeed;
-        _canShoot = false;
-        _shootTimeRemeaning = 2.8f;
+        var _projectile = pool.RequestProyectile(); //Consigue el proyectil
+        _projectile.transform.SetPositionAndRotation(launchPoint.position, launchPoint.rotation); //C0onseguir la posición de lanzamiento
+        _projectile.GetComponent<Rigidbody>().velocity = launchPoint.forward * launchSpeed; //Consigue el rigidbody
+        _canShoot = false; //Desactiva el disparo
+        _shootTimeRemeaning = 2.8f; //Tiempo entre disparos
     }
 }

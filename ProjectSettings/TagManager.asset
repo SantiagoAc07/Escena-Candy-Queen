@@ -6,6 +6,7 @@ TagManager:
   tags:
   - imagen
   - Superficie
+  - AltCamera
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -708,7 +708,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 74.55409
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -734,13 +734,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14729318, y: -0.7294532, z: 0.15581731, w: 0.6495566}
-  m_LocalPosition: {x: 73.1, y: 20.1, z: 50}
+  m_LocalRotation: {x: 0.1972728, y: -0.67903125, z: 0.1972728, w: 0.67903125}
+  m_LocalPosition: {x: 107, y: 20.1, z: 51.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 24.751, y: -96.804, z: -0.786}
+  m_LocalEulerAnglesHint: {x: 32.399, y: -90, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,10 +1092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db52688cd89b93543934f74b8749f46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagen: {fileID: 2007825164}
-  speed: 0.2
-  contador: 0
-  presX: 0
 --- !u!136 &620581082
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1261,10 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db52688cd89b93543934f74b8749f46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagen: {fileID: 778718304}
-  speed: 0.4
-  contador: 0
-  presX: 0
 --- !u!1 &762241598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 736140272}
   fuerza: 1000
+  PowerBarP2: {fileID: 0}
   medidorFuerza: {fileID: 2007825164}
   centerOfMass: {fileID: 736140270}
   orbitalSpeed: 150
@@ -1895,6 +1888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 620581080}
   fuerza: 1000
+  PowerBarP2: {fileID: 0}
   medidorFuerza: {fileID: 2007825164}
   centerOfMass: {fileID: 620581079}
   orbitalSpeed: 150

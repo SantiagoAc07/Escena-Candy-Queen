@@ -5,15 +5,15 @@ public class MovimientoDireccionPlayer2 : MonoBehaviour
 
 
 {
-    [SerializeField] private Rigidbody playerRB;
-    [SerializeField] private float fuerza;
-    [SerializeField] GameObject PowerBarP2;
-    public static MovimientoImpulsoPlayer2 movimientoImpulso;
-    public Image medidorFuerza;
-    public Transform centerOfMass;
-    public float orbitalSpeed;
-    public int estado = 0;
-    private Vector3 dir;
+    [SerializeField] private Rigidbody playerRB; //Rigidbody del personaje
+    [SerializeField] private float fuerza; //Valor de fuerza
+    [SerializeField] GameObject PowerBarP2; //Barra de Potencia (Visual)
+    public static MovimientoImpulsoPlayer2 movimientoImpulso; //Conseguir el script de Impulso del jugador
+    public Image medidorFuerza; //Controllador de potencia (Visual)
+    public Transform centerOfMass; //Conseguir el Centro de Masa
+    public float orbitalSpeed; //Velocidad orbital
+    public int estado = 0; //Estado de movimiento del jugador
+    private Vector3 dir; //Dirección
     private float fuerzaCalculada;
 
     [SerializeField] Rigidbody rb;
@@ -23,8 +23,8 @@ public class MovimientoDireccionPlayer2 : MonoBehaviour
     void Start()
     {
 
-        rb = GetComponent<Rigidbody>();
-        PowerBarP2.SetActive(false);
+        rb = GetComponent<Rigidbody>(); //Obtener el rigidbody del personaje
+        PowerBarP2.SetActive(false); //Desactivar la barra de potencia (Visual)
     }
 
     // Update is called once per frame
@@ -35,27 +35,27 @@ public class MovimientoDireccionPlayer2 : MonoBehaviour
         Orbit();
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if (estado == 0)
+            if (estado == 0) 
             {
-                CalcularVector();
-                PowerBarP2.SetActive(true);
+                CalcularVector(); //Método de dirección
+                PowerBarP2.SetActive(true); //Activar la barra de potencia (Visual)
                 estado++;
             }
             else if (estado == 1)
             {
-                Impulsar();
-                PowerBarP2.SetActive(false);
+                Impulsar(); //Método de impulso
+                PowerBarP2.SetActive(false); //Desactivar la barra de potencia (Visual)
             }
         }
     }
 
     public void CalcularVector()
     {
-        //detiene la orbita de la flecha de direccion
-        orbitalSpeed = 0f;
+        
+        orbitalSpeed = 0f; //detiene la orbita de la flecha en la dirección seleccionada
 
-        //calcula el vector de direccion
-        dir = (transform.position - centerOfMass.position).normalized;
+       
+        dir = (transform.position - centerOfMass.position).normalized;  //calcula el vector de dirección
 
         //return dir;
         //le da impulso en la direccion del vector dir
