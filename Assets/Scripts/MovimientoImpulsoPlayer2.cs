@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MovimientoImpulso : MonoBehaviour
+public class MovimientoImpulsoPlayer2 : MonoBehaviour
 {
-    MovimientoDireccion movimientoDireccion;
+    public static MovimientoDireccion movDireccion;
     public Image imagen;
     public float speed = 0.40f;
     private bool isIncreasing = true;
@@ -14,7 +14,7 @@ public class MovimientoImpulso : MonoBehaviour
 
     void Awake()
     {
-        movimientoDireccion = GetComponent<MovimientoDireccion>();
+        movDireccion = GetComponent<MovimientoDireccion>();
     }
 
     // Update is called once per frame
@@ -43,9 +43,9 @@ public class MovimientoImpulso : MonoBehaviour
 
         void impulso()
         {
-            //Vector3 direccion = movimientoDireccion.CalcularVector();
+            //Vector3 direccion = movDireccion.CalcularVector();
             //print(direccion);
-            //movimientoDireccion.centerOfMass.GetComponent<Rigidbody>().AddForce(direccion * 10f, ForceMode.Impulse);
+            //movDireccion.centerOfMass.GetComponent<Rigidbody>().AddForce(direccion * 10f, ForceMode.Impulse);
         }
     }
 

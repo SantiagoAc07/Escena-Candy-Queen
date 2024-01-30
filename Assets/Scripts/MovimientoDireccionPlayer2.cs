@@ -7,7 +7,8 @@ public class MovimientoDireccionPlayer2 : MonoBehaviour
 {
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private float fuerza;
-    public static MovimientoImpulso movimientoImpulso;
+    [SerializeField] GameObject PowerBarP2;
+    public static MovimientoImpulsoPlayer2 movimientoImpulso;
     public Image medidorFuerza;
     public Transform centerOfMass;
     public float orbitalSpeed;
@@ -23,12 +24,13 @@ public class MovimientoDireccionPlayer2 : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
+        PowerBarP2.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        movimientoImpulso = GetComponent<MovimientoImpulso>();
+        movimientoImpulso = GetComponent<MovimientoImpulsoPlayer2>();
 
         Orbit();
         if (Input.GetKeyDown(KeyCode.M))
@@ -36,11 +38,13 @@ public class MovimientoDireccionPlayer2 : MonoBehaviour
             if (estado == 0)
             {
                 CalcularVector();
+                PowerBarP2.SetActive(true);
                 estado++;
             }
             else if (estado == 1)
             {
                 Impulsar();
+                PowerBarP2.SetActive(false);
             }
         }
     }
