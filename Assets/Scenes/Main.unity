@@ -647,7 +647,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 20be63818da8c0a47803b5f541517018,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20be63818da8c0a47803b5f541517018,
         type: 3}
@@ -1411,7 +1411,7 @@ Rigidbody:
   m_GameObject: {fileID: 620581078}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1427,7 +1427,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!136 &620581082
 CapsuleCollider:
@@ -1436,7 +1436,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620581078}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d9920794c3f14c944a41a39e207f1287, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1448,8 +1448,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.91485536
-  m_Height: 4.67
+  m_Radius: 0.8823256
+  m_Height: 4.72
   m_Direction: 1
   m_Center: {x: 0, y: 2.2199998, z: 0}
 --- !u!114 &620581083
@@ -1555,7 +1555,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736140269}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d9920794c3f14c944a41a39e207f1287, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1570,7 +1570,7 @@ CapsuleCollider:
   m_Radius: 0.88232565
   m_Height: 4.72
   m_Direction: 1
-  m_Center: {x: 0, y: 2.39, z: 0}
+  m_Center: {x: 0, y: 2.22, z: 0}
 --- !u!54 &736140272
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1580,7 +1580,7 @@ Rigidbody:
   m_GameObject: {fileID: 736140269}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1596,7 +1596,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &736140273
 MonoBehaviour:
@@ -2537,7 +2537,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6af83b115e29b6b46b31beab161fc92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6af83b115e29b6b46b31beab161fc92f,
         type: 3}
@@ -3050,7 +3050,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715530196}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d9920794c3f14c944a41a39e207f1287, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
